@@ -10,7 +10,12 @@ const create = async ({ displayName, email, password, image }) => {
   const createdUser = await User.create(
     { displayName, email, password, image: image || '' },
   );
-  const token = createToken({ email: createdUser.email });
+
+  const payload = {
+    email: createdUser.email,
+  };
+
+  const token = createToken(payload);
 
   return { type: null, message: token };
   };
