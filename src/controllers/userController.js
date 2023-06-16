@@ -8,6 +8,12 @@ const create = async (req, res) => {
   return res.status(201).json({ token: message });
   };
 
+const findAll = async (_req, res) => {
+    const result = await userService.findAll();
+    res.status(200).json(result);
+    };
+
   module.exports = {
     create,
+    findAll,
   };
