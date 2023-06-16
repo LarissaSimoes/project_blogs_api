@@ -18,4 +18,6 @@ userController.create,
 
 router.get('/', validateJwt, userController.findAll);
 
+router.get('/:id', validateJwt, userController.findById);
+
 module.exports = router;
