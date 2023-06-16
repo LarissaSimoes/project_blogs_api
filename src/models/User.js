@@ -7,11 +7,12 @@ module.exports = (sequelize, DataTypes) => {
           },
       displayName: DataTypes.STRING,
       email: DataTypes.STRING,
-      password: DataTypes.string,
-      image: DataTypes.string
+      password: DataTypes.STRING,
+      image: DataTypes.STRING
     }, {
       tablename: 'users',
-      underscored: true
+      underscored: true,
+      timestamps: false,
     })
  
     return userTable;
