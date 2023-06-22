@@ -11,6 +11,8 @@ const create = async ({ displayName, email, password, image }) => {
     { displayName, email, password, image: image || '' },
   );
 
+  console.log(createdUser, 'AQUI!!!!');
+
   const payload = {
     email: createdUser.email,
   };
