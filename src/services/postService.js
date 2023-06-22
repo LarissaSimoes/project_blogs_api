@@ -1,4 +1,4 @@
-const { BlogPost, Category, PostsCategory, User } = require('../models');
+const { BlogPost, Category, PostCategory, User } = require('../models');
 const { decodeToken } = require('../utils/JWT');
 
 const create = async ({ title, content, categoryIds }, token) => {
@@ -14,7 +14,7 @@ const create = async ({ title, content, categoryIds }, token) => {
 
 await Promise.all(
   categoryIds.map(async (category) => {
-    await PostsCategory.create({ postId: createdPost.id, categoryId: category });
+    await PostCategory.create({ postId: createdPost.id, categoryId: category });
   }),
 );
   
