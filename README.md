@@ -15,7 +15,7 @@ Características:
 - Node.js
 - Express
 - Sequelize
-- API e banco de dados
+- API REST e banco de dados
 - JWT (JSON Web Token)
 - Arquitetura em camadas
 
